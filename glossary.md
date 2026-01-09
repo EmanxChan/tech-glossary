@@ -54,6 +54,13 @@ A personal dictionary of technical terms explained in simple language.
 - **Related terms**: Push, Pull, Origin
 - **Example**: When you run `git push`, git uses the remote to know "push to GitHub at this specific URL"
 
+### README
+- **Simple definition**: A special file called README.md that becomes the front page of your GitHub repository
+- **Analogy**: Like the cover and introduction of a book - it's the first thing visitors see and tells them what's inside
+- **When you'll use it**: Every GitHub project should have one to explain what the project is and how to use it
+- **Related terms**: Repository, GitHub, Markdown
+- **Example**: Your tech-glossary README shows stats, recent terms, and links to the full glossary, making it welcoming for visitors
+
 ---
 
 ## How to Use This Glossary
@@ -65,4 +72,4 @@ A personal dictionary of technical terms explained in simple language.
 
 ---
 
-**Terms covered**: 7
+**Terms covered**: 8

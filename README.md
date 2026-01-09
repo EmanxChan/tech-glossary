@@ -8,7 +8,7 @@ Welcome to my learning journey! This glossary helps me (and maybe you!) understa
 
 ## 📊 Stats
 
-- **Total Terms**: 7
+- **Total Terms**: 8
 - **Categories**: Git & Version Control
 - **Last Updated**: 2026-01-08
 - **Status**: 🟢 Actively maintained & auto-updated
@@ -17,20 +17,20 @@ Welcome to my learning journey! This glossary helps me (and maybe you!) understa
 
 ## 🆕 Recently Added
 
-### Push
-Uploading your local commits (saved snapshots) from your computer to GitHub.
+### README
+A special file that becomes the front page of your GitHub repository.
 
-**Think of it like**: Backing up photos from your phone to iCloud. Your photos stay on your phone AND get copied to the cloud.
+**Think of it like**: The cover and introduction of a book - it's the first thing visitors see and tells them what's inside.
 
 ### Remote
 The connection between your local repository and the online version on GitHub.
 
 **Think of it like**: Having your friend's phone number saved. The "remote" is the address that tells git where to find the online version.
 
-### Repository (Repo)
-A project folder that git is tracking, containing all your files plus the history of every change.
+### Push
+Uploading your local commits (saved snapshots) from your computer to GitHub.
 
-**Think of it like**: A recipe binder that not only has the current recipes, but also every previous version and who made what changes.
+**Think of it like**: Backing up photos from your phone to iCloud. Your photos stay on your phone AND get copied to the cloud.
 
 ---
 
@@ -40,8 +40,8 @@ A project folder that git is tracking, containing all your files plus the histor
 
 The full glossary includes detailed explanations for all terms, organized by category:
 
-- **Git & Version Control** (7 terms)
-  - Forking, Cloning, Repository, Git, GitHub, Push, Remote
+- **Git & Version Control** (8 terms)
+  - Forking, Cloning, Repository, Git, GitHub, Push, Remote, README
 
 ---
 
