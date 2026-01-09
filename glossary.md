@@ -40,6 +40,20 @@ A personal dictionary of technical terms explained in simple language.
 - **When you'll use it**: When you want to backup your code online, share it with others, or contribute to open-source projects
 - **Related terms**: Git, Repository, Fork, Clone
 
+### Push
+- **Simple definition**: Uploading your local commits (saved snapshots) from your computer to GitHub
+- **Analogy**: Like backing up photos from your phone to iCloud. Your photos stay on your phone AND get copied to the cloud
+- **When you'll use it**: After making commits locally, you push them to GitHub to back them up and share them
+- **Related terms**: Pull, Remote, Clone
+- **Example**: You add 3 new terms to your glossary and commit them locally. Then you "push" those commits to GitHub so they're backed up online
+
+### Remote
+- **Simple definition**: The connection between your local repository and the online version on GitHub
+- **Analogy**: Like having your friend's phone number saved. The "remote" is the address that tells git where to find the online version
+- **When you'll use it**: Git uses this automatically when you push or pull. You set it up once and forget about it
+- **Related terms**: Push, Pull, Origin
+- **Example**: When you run `git push`, git uses the remote to know "push to GitHub at this specific URL"
+
 ---
 
 ## How to Use This Glossary
@@ -51,4 +65,4 @@ A personal dictionary of technical terms explained in simple language.
 
 ---
 
-**Terms covered**: 5
+**Terms covered**: 7
