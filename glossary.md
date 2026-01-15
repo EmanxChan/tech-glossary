@@ -47,6 +47,13 @@ A personal dictionary of technical terms explained in simple language.
 - **Related terms**: Pull, Remote, Clone
 - **Example**: You add 3 new terms to your glossary and commit them locally. Then you "push" those commits to GitHub so they're backed up online
 
+### Pull Request (PR)
+- **Simple definition**: A request to merge your changes into someone's project (or another branch). It's like saying "I made some changes, please review and accept them"
+- **Analogy**: Like submitting a draft of your work for review before it becomes official. Your teacher can see exactly what you changed, leave comments, request edits, and decide whether to accept it
+- **When you'll use it**: When you want to contribute changes to a project - either someone else's project or to collaborate on a team project with code review
+- **Related terms**: Fork, Push, Merge, Code Review
+- **Example**: You fork a recipe project, add a new cookie recipe, push your changes to your fork, then create a PR asking the original owner to add your recipe to their collection. They can review it, suggest changes, and merge it if they like it
+
 ### Remote
 - **Simple definition**: The connection between your local repository and the online version on GitHub
 - **Analogy**: Like having your friend's phone number saved. The "remote" is the address that tells git where to find the online version
@@ -72,4 +79,4 @@ A personal dictionary of technical terms explained in simple language.
 
 ---
 
-**Terms covered**: 8
+**Terms covered**: 9
