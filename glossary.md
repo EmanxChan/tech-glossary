@@ -28,6 +28,13 @@ A personal dictionary of technical terms explained in simple language.
 - **When you'll use it**: Every time you work with git - every project is a repository
 - **Related terms**: Clone, Fork, Commit
 
+### Branch
+- **Simple definition**: A parallel version of your project where you can make changes without affecting the main version
+- **Analogy**: Like making a copy of your essay to try different edits. Your original stays safe on the "main" version while you experiment on a separate "draft" version. When you're happy with your draft, you can merge it back into the main one
+- **When you'll use it**: When you want to work on a new feature or fix a bug without messing up the working version. Also essential for creating Pull Requests
+- **Related terms**: Merge, Pull Request, Commit, Main
+- **Example**: You want to add a new recipe to your cookbook project. You create a branch called "add-cookies" to work on it. If you make mistakes, the main cookbook is still perfect. When your cookie recipe is ready, you merge that branch back into main
+
 ### Git
 - **Simple definition**: A tool installed on your computer that tracks changes to files over time
 - **Analogy**: Like a super-powered undo button that remembers every version of your work and lets you go back to any point
@@ -79,4 +86,4 @@ A personal dictionary of technical terms explained in simple language.
 
 ---
 
-**Terms covered**: 9
+**Terms covered**: 10
