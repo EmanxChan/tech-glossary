@@ -2,7 +2,7 @@
 
 A personal dictionary of technical terms explained in simple language.
 
-**Last updated**: 2026-01-08
+**Last updated**: 2026-01-14
 
 ---
 
@@ -77,6 +77,51 @@ A personal dictionary of technical terms explained in simple language.
 
 ---
 
+## Artificial Intelligence
+
+### AI Model
+- **Simple definition**: A program that has "learned" from millions of examples and can now make predictions or generate responses based on patterns it discovered
+- **Analogy**: Like a chef who has tasted thousands of dishes. After enough experience, the chef can predict what flavors go well together and create new recipes based on patterns they've noticed
+- **When you'll use it**: Whenever you interact with ChatGPT, Claude, image generators, or voice assistants - you're using an AI model
+- **Related terms**: Training, Parameters, Neural Network
+
+### Training (AI)
+- **Simple definition**: The process of teaching an AI by showing it billions of examples and letting it learn patterns through trial and error
+- **Analogy**: Like learning to ride a bike. At first you fall, your brain adjusts, you try again. Eventually balancing becomes automatic. AI does this millions of times with data
+- **When you'll use it**: You won't train AI yourself, but understanding this helps you know why AI can do what it does (and why it sometimes makes mistakes)
+- **Related terms**: AI Model, Parameters, RLHF
+- **Example**: A language model is trained by predicting the next word in billions of sentences. "The cat sat on the ___" → it guesses "mat" and checks if it's right
+
+### Parameters
+- **Simple definition**: The internal "dials" an AI adjusts during learning - they control how the AI makes predictions
+- **Analogy**: Like the settings on a music equalizer. Each dial affects the output slightly. AI models have billions of these dials that get fine-tuned during training
+- **When you'll use it**: You'll hear about "billion-parameter models" - more parameters generally means the AI can learn more complex patterns
+- **Related terms**: AI Model, Training
+- **Example**: GPT-4 has over a trillion parameters. Each one was adjusted during training to help the model produce better responses
+
+### RLHF (Reinforcement Learning from Human Feedback)
+- **Simple definition**: A training method where real people rate AI responses as helpful or unhelpful, and the AI adjusts to produce more helpful answers
+- **Analogy**: Like having a coach watch your performance and give you pointers. The AI tries something, humans say "good" or "bad," and the AI learns from that feedback
+- **When you'll use it**: This is why modern AI assistants feel more helpful - they've learned from human preferences, not just raw data
+- **Related terms**: Training, AI Model
+- **Example**: An AI might generate two responses. Humans pick the better one. Over millions of comparisons, the AI learns what humans find helpful
+
+### Multimodal
+- **Simple definition**: AI that can work with multiple types of content - text, images, audio, and video - not just one type
+- **Analogy**: Like a person who can read, see photos, and listen to music, rather than only being able to read text
+- **When you'll use it**: When you upload an image to an AI and ask questions about it, or when AI generates images from your text descriptions
+- **Related terms**: AI Model, Training
+- **Example**: You show an AI a photo of your broken appliance and ask "What's wrong with this?" - that's multimodal AI understanding both your text question and the image
+
+### AI Agent
+- **Simple definition**: An AI system that can work on tasks independently over time, making decisions and taking actions without constant human guidance
+- **Analogy**: Like a personal assistant who can complete a whole project (research, draft, edit, send) vs. someone who only answers one question at a time
+- **When you'll use it**: As AI advances, agents will handle complex multi-step tasks like "book me a trip" or "set up this software project"
+- **Related terms**: AI Model, Multimodal
+- **Example**: Instead of asking AI 10 separate questions to plan a trip, an AI agent could research destinations, compare prices, check your calendar, and present options - all from one request
+
+---
+
 ## How to Use This Glossary
 
 - **When learning**: Look up terms you've forgotten
@@ -86,4 +131,4 @@ A personal dictionary of technical terms explained in simple language.
 
 ---
 
-**Terms covered**: 10
+**Terms covered**: 16
