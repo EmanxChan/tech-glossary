@@ -2,7 +2,7 @@
 
 A personal dictionary of technical terms explained in simple language.
 
-**Last updated**: 2026-01-14
+**Last updated**: 2026-01-16
 
 ---
 
@@ -122,6 +122,45 @@ A personal dictionary of technical terms explained in simple language.
 
 ---
 
+## Development Tools & Configuration
+
+### Symlink
+- **Simple definition**: A shortcut file that points to another file stored somewhere else
+- **Analogy**: Like a library catalog card. The card (symlink) tells you where to find the actual book (file). If the book's content changes, everyone reading that catalog card sees the updated book
+- **When you'll use it**: When you want multiple projects to share the same configuration file without copying it everywhere
+- **Related terms**: Configuration, File System
+- **Example**: Instead of copying your coding rules into every project folder, you create a symlink that points to one master file. Update the master, and all projects get the update
+
+### Custom Droid
+- **Simple definition**: A specialized mini-assistant inside Factory Droid that you can call on for specific tasks
+- **Analogy**: Like having specialists on a team. Need something explained simply? Call the explainer specialist. Need code reviewed? Call the reviewer specialist
+- **When you'll use it**: When using Factory Droid and you want a focused helper for a specific type of task
+- **Related terms**: AI Agent, Factory Droid, Subagent
+- **Example**: Type `@reviewer` in Droid to invoke the code review specialist, or `@explainer` to get simple explanations
+
+### AGENTS.md
+- **Simple definition**: A configuration file that tells AI coding assistants how to behave in your project
+- **Analogy**: Like an employee handbook that all new hires read. It explains "here's how we do things" so everyone follows the same rules
+- **When you'll use it**: When you want AI tools (Claude Code, Droid, Cursor, etc.) to follow consistent rules across your projects
+- **Related terms**: CLAUDE.md, Configuration, Symlink
+- **Example**: Your AGENTS.md might say "always put new projects in ~/Projects/active/" and "run tests before committing"
+
+### MCP Server (Model Context Protocol)
+- **Simple definition**: External tools that AI assistants can connect to for extra capabilities
+- **Analogy**: Like apps you install on your phone. Your phone has basic features, but apps give it new powers. MCP servers give AI assistants new powers
+- **When you'll use it**: When you want your AI assistant to connect to services like GitHub, Playwright (browser testing), or documentation lookups
+- **Related terms**: Plugin, API, Integration
+- **Example**: The Context7 MCP server lets Droid look up the latest documentation for any programming library
+
+### Co-Author (Git)
+- **Simple definition**: A credit line in git commits showing that an AI helped write the code
+- **Analogy**: Like a "written by" credit in a book that lists multiple authors. It shows who contributed to the work
+- **When you'll use it**: Automatically added when AI assistants help you write code, so you can track which tool helped with what
+- **Related terms**: Commit, Git, Attribution
+- **Example**: `Co-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>` or `Co-Authored-By: Droid <droid@factory.ai>`
+
+---
+
 ## How to Use This Glossary
 
 - **When learning**: Look up terms you've forgotten
@@ -131,4 +170,4 @@ A personal dictionary of technical terms explained in simple language.
 
 ---
 
-**Terms covered**: 16
+**Terms covered**: 21
