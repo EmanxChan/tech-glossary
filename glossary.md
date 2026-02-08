@@ -159,6 +159,13 @@ A personal dictionary of technical terms explained in simple language.
 - **Related terms**: Commit, Git, Attribution
 - **Example**: `Co-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>` or `Co-Authored-By: Droid <droid@factory.ai>`
 
+### Refactor
+- **Simple definition**: Improving the *internal* structure of code without changing its *external* behavior. It's about making code cleaner, faster, or easier to read
+- **Analogy**: Like rewriting a paragraph to be clearer using better words, but the meaning of the paragraph stays exactly the same. Or rearranging your kitchen so it's easier to cook, but you're still making the same meal
+- **When you'll use it**: When your code works, but it's getting messy or hard to understand as you add new features
+- **Related terms**: Technical Debt, Best Practices, Optimization
+- **Example**: You have a long, confusing function that calculates a budget. You refactor it by breaking it into three smaller, clearly-named functions. The math doesn't change, but it's now much easier for a human to read
+
 ---
 
 ## How to Use This Glossary
