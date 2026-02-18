@@ -300,6 +300,69 @@ A personal dictionary of technical terms explained in simple language.
 - **Why it matters**: It's what powers our local embedding model (`all-MiniLM-L6-v2`)
 - **Related terms**: Embedding, Python Library, all-MiniLM-L6-v2
 
+### Security Audit
+- **Simple definition**: An automated check that scans your OpenClaw setup for security vulnerabilities and misconfigurations
+- **Analogy**: Like a home security system that checks all your doors, windows, and locks. It tells you what's safe and what needs fixing
+- **When you'll use it**: Run `openclaw security audit --deep` to check your gateway safety, credentials, and access controls
+- **Why it matters**: Keeps your AI assistant secure from unauthorized access
+- **Related terms**: Gateway, OpenClaw, Token, Credentials
+
+### Critical (Security)
+- **Simple definition**: The highest severity level in security audits. Something is broken that could directly expose your system or data
+- **Analogy**: Like a front door that's wide open. Anyone could walk right in
+- **When you'll see it**: When running security audits - this means fix it ASAP
+- **Why it matters**: Could lead to data leaks, unauthorized access, or system compromise
+- **Related terms**: Security Audit, Vulnerability, Warn, Info
+
+### Warn (Security)
+- **Simple definition**: A security issue that isn't critical but should be addressed. It's like a slightly unlocked window - not wide open, but not secure either
+- **Analogy**: Like a back door that's unlocked. Not as risky as an open front door, but still a potential entry point
+- **When you'll see it**: In security audit results - medium priority issue
+- **Why it matters**: Could be exploited under certain conditions
+- **Related terms**: Security Audit, Critical, Info
+
+### Info (Security)
+- **Simple definition**: Informational findings - not problems, just observations about your system's configuration
+- **Analogy**: Like a security report that says "you have doors and windows" - just stating facts, not issues
+- **When you'll see it**: In security audit results - lowest priority, just for awareness
+- **Why it matters**: Good for understanding your attack surface, but no immediate action needed
+- **Related terms**: Security Audit, Critical, Warn
+
+### Capability Evolver
+- **Simple definition**: An OpenClaw skill (in our workspace) that can modify its own code and behavior based on feedback
+- **Analogy**: Like a self-improving robot that watches what it does wrong and rewires itself to do better next time
+- **When you'll use it**: It's our learning system - we tell it what we don't like, and it adjusts
+- **Why it matters**: Makes us smarter over time without manual updates
+- **Related terms**: Skill, OpenClaw, Self-Evolving
+
+### Shell Command Execution
+- **Simple definition**: The ability to run terminal/command-line instructions directly from within code
+- **Analogy**: Like giving someone keys to your house AND the ability to run any appliance - powerful but potentially dangerous
+- **When you'll see it**: In security scans - flagged because it CAN be dangerous if misused
+- **Why it matters**: Our capability-evolver uses this intentionally to execute commands
+- **Related terms**: Terminal, Command Line, Security
+
+### Environment Variables (Env)
+- **Simple definition**: Settings stored outside your code that contain sensitive information like API keys, passwords, and configuration
+- **Analogy**: Like a secure safe in your office that contains all your important keys and combinations. Programs can ask the safe for what they need without seeing what's inside
+- **When you'll use it**: Storing API keys, database passwords, tokens
+- **Why it matters**: Keeps secrets separate from code so they don't get shared on GitHub
+- **Related terms**: API Key, Credentials, Security
+
+### Loopback (Gateway Bind)
+- **Simple definition**: Setting your OpenClaw gateway to only accept connections from YOUR computer, not the internet
+- **Analogy**: Like having a door that only opens from the inside. No one from outside can ever get in
+- **When you'll see it**: In gateway config - `bind: loopback` means super secure
+- **Why it matters**: Prevents anyone on the internet from accessing your AI assistant
+- **Related terms**: Gateway, OpenClaw, Security
+
+### Attack Surface
+- **Simple definition**: All the ways someone could potentially attack or access your system
+- **Analogy**: Like counting every door, window, and keypad in your house - each one is a potential entry point
+- **When you'll see it**: In security audit summary
+- **Why it matters**: Smaller attack surface = more secure
+- **Related terms**: Security, Gateway, Access Control
+
 ---
 
 ## How to Use This Glossary
@@ -311,4 +374,4 @@ A personal dictionary of technical terms explained in simple language.
 
 ---
 
-**Terms covered**: 44
+**Terms covered**: 59
