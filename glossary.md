@@ -375,3 +375,62 @@ A personal dictionary of technical terms explained in simple language.
 ---
 
 **Terms covered**: 59
+
+---
+
+## Subagent
+**What it is:** A secondary AI agent spawned by the main agent to run tasks in the background. Subagents are isolated — they have their own session and can run independently.
+
+**Analogy:** Like hiring a contractor to work on one room while you focus on the rest of the house. They report back when done.
+
+**When to use:** Running parallel tasks, heavy research, or background jobs that don't need immediate back-and-forth.
+
+**Related terms:** Spawn, Session, Cron
+
+---
+
+## Spawn
+**What it is:** The act of creating or launching a subagent. In OpenClaw, you "spawn" a subagent to run a task.
+
+**Analogy:** Like pressing "start" on a new computer program. You're launching another AI to do work for you.
+
+**When to use:** When you need to delegate work to a background agent.
+
+**Related terms:** Subagent, Session
+
+---
+
+## Cron
+**What it is:** A scheduled job that runs automatically at specific times. Named after "chronological" — it's time-based automation.
+
+**Analogy:** Like setting a recurring alarm or calendar reminder. The job runs itself without you asking.
+
+**When to use:** Morning briefings, daily checks, weekly scans — anything recurring.
+
+**Related terms:** LaunchAgent, Schedule
+
+---
+
+## LaunchAgent
+**What it is:** A macOS background service that runs 24/7, even when your computer is asleep. Unlike cron (time-based), LaunchAgent runs continuously and can check things more frequently.
+
+**Analogy:** Like having a security camera that watches 24/7 vs. a guard who checks once an hour.
+
+**When to use:** Real-time monitoring (like model usage alerts every 5 minutes).
+
+**Related terms:** Cron, Daemon
+
+---
+
+## Deduplication
+**What it is:** The process of removing duplicate entries from a list. In job scans, this means filtering out the same job that appears in multiple newsletters.
+
+**Analogy:** Like going through your contacts and removing the same person saved twice under different names.
+
+**When to use:** When combining data from multiple sources to avoid presenting the same job twice.
+
+**Related terms:** Job Scan, Newsletter
+
+---
+
+*Last updated: February 23, 2026*
