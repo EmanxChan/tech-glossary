@@ -434,3 +434,30 @@ A personal dictionary of technical terms explained in simple language.
 ---
 
 *Last updated: February 23, 2026*
+
+---
+
+## AI Agents & Automation
+
+### kevinrgu/autoagent (Self-Optimizing Agent)
+- **Simple definition**: A tool that lets an AI redesign itself to get better at a task — automatically, overnight
+- **Analogy**: Like hiring a personal trainer who not only coaches you, but also rewrites their own training manual after each session to make the next one better
+- **How it works**: You write a task in `program.md` (plain English), then the agent modifies its own "brain" (agent.py config), runs tests, keeps what works, and repeats
+- **When you'll use it**: When you want to build and optimize a specific AI agent or workflow — particularly useful for custom tool-building or performance tuning
+- **Watch for**: The HKUDS/autoagent project uses the same name but does something different (no-code agent builder, not self-optimizing)
+- **Related terms**: LLM, Agent, Prompt Engineering, Benchmark
+
+### HKUDS/autoagent (No-Code Agent Builder)
+- **Simple definition**: A drag-and-drop web interface for building AI agents — no coding required
+- **Analogy**: Like building a robot with Lego blocks instead of soldering parts. You snap together pre-made pieces (agents, tools, workflows) using natural language descriptions
+- **How it works**: You describe what you want in plain English — it generates the agent configuration, tools, and workflows automatically
+- **When you'll use it**: When you need to prototype an AI workflow quickly without writing code
+- **Watch for**: Similar name to kevinrgu/autoagent but completely different purpose — one builds agents, the other optimizes them
+- **Related terms**: No-Code, Agent Framework, Workflow Automation
+
+### Mem0 (AI Memory Layer)
+- **Simple definition**: A memory system for AI agents — so they can remember conversations, preferences, and context across sessions
+- **Analogy**: Like giving your AI a persistent notebook that it can write notes in and read from on future conversations
+- **Why it matters**: Standard LLMs forget everything after each conversation. Mem0 lets them maintain long-term memory — useful for personal AI assistants
+- **Related terms**: LLM, Agent, RAG, Vector Database
+
