@@ -2,7 +2,7 @@
 
 A personal dictionary of technical terms explained in simple language.
 
-**Last updated**: 2026-02-10
+**Last updated**: 2026-05-07
 
 ---
 
@@ -365,6 +365,21 @@ A personal dictionary of technical terms explained in simple language.
 
 ---
 
+### CLI (Command Line Interface)
+- **Simple definition**: A text-based way to control software by typing commands instead of clicking buttons
+- **Analogy**: Like ordering from a restaurant by saying exactly what you want to the kitchen, instead of tapping through a touchscreen menu
+- **When you'll use it**: When AI agents or developers need fast, repeatable access to tools like GitHub, Google Drive, or job boards
+- **Related terms**: Terminal, API, AI Agent
+- **Example**: Instead of opening a website and clicking five buttons, an AI can type `flight-goat search SEA LAX` and get flight options back instantly
+
+### SQLite
+- **Simple definition**: A small database that lives in a single file on your computer
+- **Analogy**: Like a super-organized spreadsheet saved locally, but built for software to search and update quickly
+- **When you'll use it**: When a tool needs fast local storage without setting up a big database server
+- **Related terms**: Database, Local Storage, CLI
+- **Example**: A local AI tool might save your contacts or flight searches in SQLite so it can reuse them quickly without re-downloading everything
+
+
 ## How to Use This Glossary
 
 - **When learning**: Look up terms you've forgotten
@@ -374,7 +389,7 @@ A personal dictionary of technical terms explained in simple language.
 
 ---
 
-**Terms covered**: 59
+**Terms covered**: 61
 
 ---
 
