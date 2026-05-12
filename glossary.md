@@ -379,6 +379,30 @@ A personal dictionary of technical terms explained in simple language.
 - **Related terms**: Database, Local Storage, CLI
 - **Example**: A local AI tool might save your contacts or flight searches in SQLite so it can reuse them quickly without re-downloading everything
 
+## Web & Internet
+
+### Web Archive
+- **Simple definition**: A service that saves a copy, or "snapshot," of a web page at a specific moment in time
+- **Analogy**: Like taking a photo of a restaurant menu today so you can still see it later even if the restaurant changes the menu tomorrow
+- **When you'll use it**: When an article disappears, changes, gets blocked, or sits behind a paywall and you want to check whether someone saved an earlier accessible version
+- **Related terms**: Snapshot, Cache, Paywall, Wayback Machine
+- **Example**: Archive.is and the Wayback Machine can sometimes show an older saved version of a news article, but they only contain whatever was visible when the snapshot was created
+
+### Snapshot (Web Archive)
+- **Simple definition**: The saved copy of a web page captured by an archive service at one point in time
+- **Analogy**: Like a screenshot, but for the page's underlying text and layout, not just the visible picture
+- **When you'll use it**: When comparing what a page looked like before vs. now, or trying to recover content that is no longer available live
+- **Related terms**: Web Archive, Cache, URL
+- **Example**: If WSJ only showed the teaser when Archive.is captured it, the snapshot will only contain the teaser — not the full article
+
+### Paywall
+- **Simple definition**: A digital gate that limits content unless you pay, log in, or have access through an institution
+- **Analogy**: Like a locked door at a museum exhibit: you can see the sign outside, but the actual exhibit requires a ticket
+- **When you'll use it**: Whenever a publication like WSJ, NYT, or The Information blocks full article access for non-subscribers
+- **Related terms**: Web Archive, Subscription, Login
+- **Example**: WSJ may expose a headline and first paragraph publicly, while hiding the rest behind its paywall
+
+---
 
 ## How to Use This Glossary
 
@@ -389,7 +413,7 @@ A personal dictionary of technical terms explained in simple language.
 
 ---
 
-**Terms covered**: 61
+**Terms covered**: 64
 
 ---
 
@@ -475,4 +499,3 @@ A personal dictionary of technical terms explained in simple language.
 - **Analogy**: Like giving your AI a persistent notebook that it can write notes in and read from on future conversations
 - **Why it matters**: Standard LLMs forget everything after each conversation. Mem0 lets them maintain long-term memory — useful for personal AI assistants
 - **Related terms**: LLM, Agent, RAG, Vector Database
-
