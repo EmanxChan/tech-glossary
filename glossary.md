@@ -2,7 +2,7 @@
 
 A personal dictionary of technical terms explained in simple language.
 
-**Last updated**: 2026-05-07
+**Last updated**: 2026-05-22
 
 ---
 
@@ -87,6 +87,18 @@ A personal dictionary of technical terms explained in simple language.
 - **When you'll use it**: When your code works, but it's getting messy or hard to understand as you add new features
 - **Related terms**: Technical Debt, Best Practices, Optimization
 - **Example**: You have a long, confusing function that calculates a budget. You refactor it by breaking it into three smaller, clearly-named functions. The math doesn't change, but it's now much easier for a human to read
+
+---
+
+## Automation & Scheduling
+
+### Cron
+- **Simple definition**: A scheduled automation that runs at a specific time or interval, like "every day at 10 AM" or "every Friday at 5 PM"
+- **Analogy**: Like an alarm clock for software. Instead of waking a person up, it wakes up a script, report, or agent task
+- **When you'll use it**: When you want something to happen automatically on a schedule, such as model usage checks, morning briefs, reminders, backups, or cleanups
+- **Why it matters**: Cron turns recurring chores into reliable background systems, but bad cron setup can spam you or fail silently, so each job needs clear timing, delivery, and failure handling
+- **Related terms**: Script, Automation, Scheduler, Job
+- **Example**: The Model Usage cron runs three times per day and tells OpenClaw to run the model usage script, then deliver the result to Telegram
 
 ---
 
