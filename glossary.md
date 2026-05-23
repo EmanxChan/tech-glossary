@@ -2,7 +2,7 @@
 
 A personal dictionary of technical terms explained in simple language.
 
-**Last updated**: 2026-05-22
+**Last updated**: 2026-05-23
 
 ---
 
@@ -294,6 +294,13 @@ A personal dictionary of technical terms explained in simple language.
 - **Analogy**: Like a restaurant menu. The menu lists what you can order (the API). You don't need to know how the kitchen works — you just pick from the menu, and the food comes out. The menu is the "interface" between you and the kitchen
 - **Why it matters**: APIs let different systems work together without knowing each other's internal details
 - **Related terms**: Integration, Endpoint, REST
+
+### Callback
+- **Simple definition**: A message that gets sent back to a program after you click a button or finish an action
+- **Analogy**: Like pressing a doorbell. The button itself does not open the door; it sends a signal inside the house so someone or something can respond
+- **When you'll use it**: Telegram inline buttons, website buttons, payment confirmations, and app integrations often use callbacks
+- **Why it matters**: If the callback is wired wrong, the button can look real but do nothing. That was the water poll issue: Telegram showed the button, but the tap needed to route back into the `/water` logger
+- **Related terms**: API, Webhook, Event, Integration
 
 ### Venv (Virtual Environment)
 - **Simple definition**: A separate, isolated space on your computer where Python programs can install their own libraries without interfering with other programs
