@@ -2,7 +2,35 @@
 
 A personal dictionary of technical terms explained in simple language.
 
-**Last updated**: 2026-05-23
+**Last updated**: 2026-05-27
+
+---
+
+## Accounts & Authentication
+
+### OAuth
+- **Simple definition**: A login method where one service gives another app temporary permission to act on your behalf without sharing your password
+- **Analogy**: Like giving a valet ticket to park your car. The valet can do one specific thing for a limited time, but they do not get your house keys or permanent access to your life
+- **When you'll use it**: When you click "Login with Google," "Login with GitHub," or connect OpenClaw/Codex through a browser login instead of pasting an API key
+- **Why it matters**: OAuth is safer than sharing passwords because access can expire or be revoked, but that also means you sometimes need to renew the login
+- **Related terms**: Access Token, API Key, Authentication
+- **Example**: OpenClaw's Codex login uses OAuth. It works through your account subscription, but the permission expires periodically and must be refreshed
+
+### Access Token
+- **Simple definition**: A temporary digital permission slip that proves an app is allowed to use a service for you
+- **Analogy**: Like a concert wristband. It lets you into the venue today, but it will not work forever
+- **When you'll use it**: Usually behind the scenes after logging in with OAuth; tools store access tokens so they can keep working without asking you to log in every minute
+- **Why it matters**: Tokens expiring is normal security behavior. It limits the damage if a token is stolen because the stolen permission eventually stops working
+- **Related terms**: OAuth, API Key, Authentication
+- **Example**: The `emanxchan@gmail.com` Codex OAuth token currently expires on June 3, 2026 at 8:50 PM PDT
+
+### API Key
+- **Simple definition**: A long secret code that lets software call a service directly, usually billed by usage
+- **Analogy**: Like a company gas card. It keeps working without a browser login, but every use can cost money and losing it would be a problem
+- **When you'll use it**: When an app or script needs stable service access without you manually logging in, such as calling OpenAI, Tavily, or other APIs from automation
+- **Why it matters**: API keys are convenient and often do not expire quickly, but they are powerful secrets and can create surprise bills if leaked or overused
+- **Related terms**: OAuth, Access Token, Secret, Environment Variable
+- **Example**: Using an OpenAI API key could avoid frequent Codex OAuth renewals, but it would switch usage from subscription login to pay-per-use billing
 
 ---
 
