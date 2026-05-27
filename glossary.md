@@ -21,8 +21,16 @@ A personal dictionary of technical terms explained in simple language.
 - **Analogy**: Like a concert wristband. It lets you into the venue today, but it will not work forever
 - **When you'll use it**: Usually behind the scenes after logging in with OAuth; tools store access tokens so they can keep working without asking you to log in every minute
 - **Why it matters**: Tokens expiring is normal security behavior. It limits the damage if a token is stolen because the stolen permission eventually stops working
-- **Related terms**: OAuth, API Key, Authentication
-- **Example**: The `emanxchan@gmail.com` Codex OAuth token currently expires on June 3, 2026 at 8:50 PM PDT
+- **Related terms**: OAuth, Refresh Token, API Key, Authentication
+- **Example**: OpenClaw may show a near-term Codex `expires` timestamp because the access token is short-lived, even when the broader OAuth login can still be refreshed
+
+### Refresh Token
+- **Simple definition**: A longer-lived secret that an app uses to get a new access token after the old one expires
+- **Analogy**: If an access token is today's concert wristband, a refresh token is the backstage office pass that lets staff print you a new wristband when today's one stops working
+- **When you'll use it**: Usually behind the scenes in OAuth logins. You do not paste it manually; tools like OpenClaw store it and use it to keep the login working
+- **Why it matters**: It explains why a short `expires` timestamp does not always mean you need to log in again. The app may be able to refresh automatically, unless the provider rejects the refresh token
+- **Related terms**: OAuth, Access Token, API Key, Authentication
+- **Example**: OpenClaw's Codex OAuth profile stores both an access token and a refresh token, then refreshes the access token when it expires
 
 ### API Key
 - **Simple definition**: A long secret code that lets software call a service directly, usually billed by usage
