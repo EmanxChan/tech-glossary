@@ -2,7 +2,27 @@
 
 A personal dictionary of technical terms explained in simple language.
 
-**Last updated**: 2026-05-27
+**Last updated**: 2026-05-28
+
+---
+
+## Cloud Files
+
+### Dataless File
+- **Simple definition**: A file that appears on your computer but whose real contents are still stored in the cloud
+- **Analogy**: Like seeing a book title on a shelf, but the pages are still at the library and need to be delivered before you can read it
+- **When you'll use it**: When iCloud Drive, Dropbox, or another sync service saves space by keeping only a local placeholder until the file is opened or downloaded
+- **Why it matters**: Tools can see that the file exists, but reading or editing can fail until the cloud service downloads the actual contents
+- **Related terms**: iCloud Drive, Sync, Local File, Placeholder File
+- **Example**: Ebi could see `A-Areas/Reflections/2026.md`, but macOS marked it `dataless`, so the reflection save failed until iCloud downloaded the real file
+
+### Atomic Move
+- **Simple definition**: Writing a new version of a file to a temporary file first, then swapping it into place in one quick step
+- **Analogy**: Like writing a new sign on a spare board, then replacing the old sign all at once instead of repainting the sign while people are reading it
+- **When you'll use it**: When a script updates an important file and you want to avoid leaving it half-written if the app, sync service, or computer hiccups mid-save
+- **Why it matters**: It lowers the risk of corrupting files that Obsidian or iCloud might also be watching
+- **Related terms**: Temporary File, File Write, Sync
+- **Example**: The reflection script now builds the updated journal in a temp file and moves it into `2026.md` only after the new version is complete
 
 ---
 
