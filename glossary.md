@@ -2,7 +2,7 @@
 
 A personal dictionary of technical terms explained in simple language.
 
-**Last updated**: 2026-08-18
+**Last updated**: 2026-08-19
 
 ---
 
@@ -144,17 +144,35 @@ A personal dictionary of technical terms explained in simple language.
 - **Related terms**: Technical Debt, Best Practices, Optimization
 - **Example**: You have a long, confusing function that calculates a budget. You refactor it by breaking it into three smaller, clearly-named functions. The math doesn't change, but it's now much easier for a human to read
 
+### Co-Author (Git)
+- **Simple definition**: A credit line in git commits showing that an AI helped write the code
+- **Analogy**: Like a "written by" credit in a book that lists multiple authors. It shows who contributed to the work
+- **When you'll use it**: Automatically added when AI assistants help you write code, so you can track which tool helped with what
+- **Related terms**: Commit, Git, Attribution
+- **Example**: `Co-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>` or `Co-Authored-By: Droid <droid@factory.ai>`
+
 ---
 
 ## Automation & Scheduling
 
 ### Cron
-- **Simple definition**: A scheduled automation that runs at a specific time or interval, like "every day at 10 AM" or "every Friday at 5 PM"
+- **Simple definition**: A scheduled automation that runs at a specific time or interval, like "every day at 10 AM" or "every Friday at 5 PM". Named after "chronological" — it's time-based automation
 - **Analogy**: Like an alarm clock for software. Instead of waking a person up, it wakes up a script, report, or agent task
-- **When you'll use it**: When you want something to happen automatically on a schedule, such as model usage checks, morning briefs, reminders, backups, or cleanups
-- **Why it matters**: Cron turns recurring chores into reliable background systems, but bad cron setup can spam you or fail silently, so each job needs clear timing, delivery, and failure handling
-- **Related terms**: Script, Automation, Scheduler, Job
-- **Example**: The Model Usage cron runs three times per day and tells OpenClaw to run the model usage script, then deliver the result to Telegram
+- **When you'll use it**: When you want something to happen automatically on a schedule — morning briefs, model usage checks, reminders, backups, cleanups, weekly scans
+- **Why it matters**: Cron turns recurring chores into reliable background systems, but a bad cron setup can spam you or fail silently, so each job needs clear timing, delivery, and failure handling
+- **Examples we use**: Daily health check at 9:00 AM, memory compaction every 2 hours, gateway watchdog every 5 minutes, and the Model Usage cron that runs three times a day and delivers to Telegram
+- **Related terms**: LaunchAgent, Scheduler, Job, Automation, Script
+
+### LaunchAgent
+- **Simple definition**: A macOS background service that runs 24/7, even when your computer is asleep. Unlike cron (time-based), LaunchAgent runs continuously and can check things more frequently.
+- **Analogy**: Like having a security camera that watches 24/7 vs. a guard who checks once an hour.
+- **When you'll use it**: Real-time monitoring (like model usage alerts every 5 minutes).
+- **Related terms**: Cron, Daemon
+
+### Daemon / Background Process
+- **Simple definition**: A program that runs without a visible window, doing its job quietly in the background
+- **Analogy**: Like the furnace in your house. It's always running, keeping things warm, but you don't see it working. You only notice if it stops
+- **Related terms**: Gateway, Cron Job, Process
 
 ---
 
@@ -165,6 +183,12 @@ A personal dictionary of technical terms explained in simple language.
 - **Analogy**: Like a chef who has tasted thousands of dishes. After enough experience, the chef can predict what flavors go well together and create new recipes based on patterns they've noticed
 - **When you'll use it**: Whenever you interact with ChatGPT, Claude, image generators, or voice assistants - you're using an AI model
 - **Related terms**: Training, Parameters, Neural Network
+
+### LLM (Large Language Model)
+- **Simple definition**: AI trained on massive amounts of text to understand and generate human language. Examples include GPT-4, Claude, Kimi, etc.
+- **Analogy**: Like a super-librarian who's read every book in the library. They can answer questions, write stories, and explain concepts because they've "read" so much
+- **When you'll use it**: LLMs are what let me (Ebi) understand your questions and generate helpful responses
+- **Related terms**: AI, Model, Prompt, Token
 
 ### Training (AI)
 - **Simple definition**: The process of teaching an AI by showing it billions of examples and letting it learn patterns through trial and error
@@ -194,19 +218,6 @@ A personal dictionary of technical terms explained in simple language.
 - **Related terms**: AI Model, Training
 - **Example**: You show an AI a photo of your broken appliance and ask "What's wrong with this?" - that's multimodal AI understanding both your text question and the image
 
-### AI Agent
-- **Simple definition**: An AI system that can work on tasks independently over time, making decisions and taking actions without constant human guidance
-- **Analogy**: Like a personal assistant who can complete a whole project (research, draft, edit, send) vs. someone who only answers one question at a time
-- **When you'll use it**: As AI advances, agents will handle complex multi-step tasks like "book me a trip" or "set up this software project"
-- **Related terms**: AI Model, Multimodal
-- **Example**: Instead of asking AI 10 separate questions to plan a trip, an AI agent could research destinations, compare prices, check your calendar, and present options - all from one request
-
-### LLM (Large Language Model)
-- **Simple definition**: AI trained on massive amounts of text to understand and generate human language. Examples include GPT-4, Claude, Kimi, etc.
-- **Analogy**: Like a super-librarian who's read every book in the library. They can answer questions, write stories, and explain concepts because they've "read" so much
-- **When you'll use it**: LLMs are what let me (Ebi) understand your questions and generate helpful responses
-- **Related terms**: AI, Model, Prompt, Token
-
 ### Token
 - **Simple definition**: A unit of text that AI models process. Roughly, 1 token ≈ 0.75 words. "Hello world" is about 2-3 tokens
 - **Analogy**: Think of it like Scrabble tiles. Each tile is a piece of a word. AI models process text tile-by-tile. Longer conversations need more tiles
@@ -232,6 +243,68 @@ A personal dictionary of technical terms explained in simple language.
 - **Why it matters**: You don't need to remember exact words or phrases — you can describe what you're looking for and find it anyway
 - **Related terms**: Embedding, Vector Database, LLM
 
+### AI Agent
+- **Simple definition**: An AI system that can work on tasks independently over time, making decisions and taking actions without constant human guidance
+- **Analogy**: Like a personal assistant who can complete a whole project (research, draft, edit, send) vs. someone who only answers one question at a time
+- **When you'll use it**: As AI advances, agents will handle complex multi-step tasks like "book me a trip" or "set up this software project"
+- **Related terms**: AI Model, Multimodal
+- **Example**: Instead of asking AI 10 separate questions to plan a trip, an AI agent could research destinations, compare prices, check your calendar, and present options - all from one request
+
+### Subagent
+- **Simple definition**: A secondary AI agent spawned by the main agent to run tasks in the background. Subagents are isolated — they have their own session and can run independently.
+- **Analogy**: Like hiring a contractor to work on one room while you focus on the rest of the house. They report back when done.
+- **When you'll use it**: Running parallel tasks, heavy research, or background jobs that don't need immediate back-and-forth.
+- **Related terms**: Spawn, Session, Cron
+
+### Spawn
+- **Simple definition**: The act of creating or launching a subagent. In OpenClaw, you "spawn" a subagent to run a task.
+- **Analogy**: Like pressing "start" on a new computer program. You're launching another AI to do work for you.
+- **When you'll use it**: When you need to delegate work to a background agent.
+- **Related terms**: Subagent, Session
+
+### MCP Server (Model Context Protocol)
+- **Simple definition**: External tools that AI assistants can connect to for extra capabilities
+- **Analogy**: Like apps you install on your phone. Your phone has basic features, but apps give it new powers. MCP servers give AI assistants new powers
+- **When you'll use it**: When you want your AI assistant to connect to services like GitHub, Playwright (browser testing), or documentation lookups
+- **Related terms**: Plugin, API, Integration
+- **Example**: The Context7 MCP server lets Droid look up the latest documentation for any programming library
+
+### Capability Evolver
+- **Simple definition**: An OpenClaw skill (in our workspace) that can modify its own code and behavior based on feedback
+- **Analogy**: Like a self-improving robot that watches what it does wrong and rewires itself to do better next time
+- **When you'll use it**: It's our learning system - we tell it what we don't like, and it adjusts
+- **Why it matters**: Makes us smarter over time without manual updates
+- **Related terms**: Skill, OpenClaw, Self-Evolving
+
+### Custom Droid
+- **Simple definition**: A specialized mini-assistant inside Factory Droid that you can call on for specific tasks
+- **Analogy**: Like having specialists on a team. Need something explained simply? Call the explainer specialist. Need code reviewed? Call the reviewer specialist
+- **When you'll use it**: When using Factory Droid and you want a focused helper for a specific type of task
+- **Related terms**: AI Agent, Factory Droid, Subagent
+- **Example**: Type `@reviewer` in Droid to invoke the code review specialist, or `@explainer` to get simple explanations
+
+### kevinrgu/autoagent (Self-Optimizing Agent)
+- **Simple definition**: A tool that lets an AI redesign itself to get better at a task — automatically, overnight
+- **Analogy**: Like hiring a personal trainer who not only coaches you, but also rewrites their own training manual after each session to make the next one better
+- **How it works**: You write a task in `program.md` (plain English), then the agent modifies its own "brain" (agent.py config), runs tests, keeps what works, and repeats
+- **When you'll use it**: When you want to build and optimize a specific AI agent or workflow — particularly useful for custom tool-building or performance tuning
+- **Watch for**: The HKUDS/autoagent project uses the same name but does something different (no-code agent builder, not self-optimizing)
+- **Related terms**: LLM, Agent, Prompt Engineering, Benchmark
+
+### HKUDS/autoagent (No-Code Agent Builder)
+- **Simple definition**: A drag-and-drop web interface for building AI agents — no coding required
+- **Analogy**: Like building a robot with Lego blocks instead of soldering parts. You snap together pre-made pieces (agents, tools, workflows) using natural language descriptions
+- **How it works**: You describe what you want in plain English — it generates the agent configuration, tools, and workflows automatically
+- **When you'll use it**: When you need to prototype an AI workflow quickly without writing code
+- **Watch for**: Similar name to kevinrgu/autoagent but completely different purpose — one builds agents, the other optimizes them
+- **Related terms**: No-Code, Agent Framework, Workflow Automation
+
+### Mem0 (AI Memory Layer)
+- **Simple definition**: A memory system for AI agents — so they can remember conversations, preferences, and context across sessions
+- **Analogy**: Like giving your AI a persistent notebook that it can write notes in and read from on future conversations
+- **Why it matters**: Standard LLMs forget everything after each conversation. Mem0 lets them maintain long-term memory — useful for personal AI assistants
+- **Related terms**: LLM, Agent, RAG, Vector Database
+
 ---
 
 ## Memory & Storage Systems
@@ -254,19 +327,11 @@ A personal dictionary of technical terms explained in simple language.
 - **Why it matters**: It creates 384-dimensional vectors (meaning codes) that capture the meaning of text. It's "small" by AI standards (~80MB) so it runs fast on your MacBook without needing a powerful GPU
 - **Related terms**: Embedding, Local Model, Vector
 
-### Memory Compaction
-- **Simple definition**: The process of reviewing recent conversations, summarizing the important parts, and storing them for long-term memory
-- **Analogy**: Like cleaning out your notebook at the end of each day. Instead of keeping every doodle and grocery list, you copy the important stuff into a permanent journal and toss the scratch paper
-- **Why it matters**: Keeps the system fast (doesn't search through thousands of old messages) while preserving what's actually important
-- **Related terms**: Vector Database, Embedding, Semantic Search
-
-### Local Model
-- **Simple definition**: AI software that runs entirely on your own computer instead of calling out to the internet (the "cloud")
-- **Analogy**: It's the difference between having a calculator on your desk versus calling a math hotline every time you need to add numbers. The local calculator is faster, works without internet, and nobody else sees what you're calculating
-- **Why it matters**: Privacy. Your data never leaves your machine. Also works offline and doesn't cost per-use like cloud APIs
-- **Related terms**: Cloud API, Embedding, Privacy
-
----
+### Sentence Transformers
+- **Simple definition**: A Python library for creating embeddings. It turns sentences into those number vectors (embeddings) we use for semantic search
+- **Analogy**: Like a specialized dictionary that doesn't just define words — it maps them to coordinates on a giant map of meaning
+- **Why it matters**: It's what powers our local embedding model (`all-MiniLM-L6-v2`)
+- **Related terms**: Embedding, Python Library, all-MiniLM-L6-v2
 
 ### Hybrid Search
 - **Simple definition**: A search method that runs meaning-based search and keyword search at the same time, then combines the results
@@ -275,12 +340,41 @@ A personal dictionary of technical terms explained in simple language.
 - **Why it matters**: Pure vector search misses obvious exact matches; pure keyword search is too rigid and misses paraphrases. Hybrid gets both
 - **Related terms**: Vector Database, Embedding, all-MiniLM-L6-v2
 
+### Memory Compaction
+- **Simple definition**: The process of reviewing recent conversations, summarizing the important parts, and storing them for long-term memory
+- **Analogy**: Like cleaning out your notebook at the end of each day. Instead of keeping every doodle and grocery list, you copy the important stuff into a permanent journal and toss the scratch paper
+- **Why it matters**: Keeps the system fast (doesn't search through thousands of old messages) while preserving what's actually important
+- **Related terms**: Vector Database, Embedding, Semantic Search
+
 ### Memory-Core (OpenClaw Plugin)
 - **Simple definition**: The built-in OpenClaw plugin that stores and retrieves memories, coordinating between your files, the embedding model, and Qdrant
 - **Analogy**: The head librarian — it knows where everything is filed, runs the search, and makes sure new material gets shelved where it can be found again
 - **Example**: When you save a note, Memory-Core turns it into an embedding, stores it in Qdrant, and later finds it again when you ask a related question
 - **Why it matters**: It's the piece that makes the memory system cohere. Without it the files, embeddings, and database stay disconnected parts
 - **Related terms**: Qdrant, Embedding, Vector Database
+
+### Local Model
+- **Simple definition**: AI software that runs entirely on your own computer instead of calling out to the internet (the "cloud")
+- **Analogy**: It's the difference between having a calculator on your desk versus calling a math hotline every time you need to add numbers. The local calculator is faster, works without internet, and nobody else sees what you're calculating
+- **Why it matters**: Privacy. Your data never leaves your machine. Also works offline and doesn't cost per-use like cloud APIs
+- **Related terms**: Cloud API, Embedding, Privacy
+
+### Deduplication
+- **Simple definition**: The process of removing duplicate entries from a list. In job scans, this means filtering out the same job that appears in multiple newsletters.
+- **Analogy**: Like going through your contacts and removing the same person saved twice under different names.
+- **When you'll use it**: When combining data from multiple sources to avoid presenting the same job twice.
+- **Related terms**: Job Scan, Newsletter
+---
+*Last updated: February 23, 2026*
+
+### SQLite
+- **Simple definition**: A small database that lives in a single file on your computer
+- **Analogy**: Like a super-organized spreadsheet saved locally, but built for software to search and update quickly
+- **When you'll use it**: When a tool needs fast local storage without setting up a big database server
+- **Related terms**: Database, Local Storage, CLI
+- **Example**: A local AI tool might save your contacts or flight searches in SQLite so it can reuse them quickly without re-downloading everything
+
+---
 
 ## Development Tools & Configuration
 
@@ -291,13 +385,6 @@ A personal dictionary of technical terms explained in simple language.
 - **Related terms**: Configuration, File System
 - **Example**: Instead of copying your coding rules into every project folder, you create a symlink that points to one master file. Update the master, and all projects get the update
 
-### Custom Droid
-- **Simple definition**: A specialized mini-assistant inside Factory Droid that you can call on for specific tasks
-- **Analogy**: Like having specialists on a team. Need something explained simply? Call the explainer specialist. Need code reviewed? Call the reviewer specialist
-- **When you'll use it**: When using Factory Droid and you want a focused helper for a specific type of task
-- **Related terms**: AI Agent, Factory Droid, Subagent
-- **Example**: Type `@reviewer` in Droid to invoke the code review specialist, or `@explainer` to get simple explanations
-
 ### AGENTS.md
 - **Simple definition**: A configuration file that tells AI coding assistants how to behave in your project
 - **Analogy**: Like an employee handbook that all new hires read. It explains "here's how we do things" so everyone follows the same rules
@@ -305,31 +392,13 @@ A personal dictionary of technical terms explained in simple language.
 - **Related terms**: CLAUDE.md, Configuration, Symlink
 - **Example**: Your AGENTS.md might say "always put new projects in ~/Projects/active/" and "run tests before committing"
 
-### MCP Server (Model Context Protocol)
-- **Simple definition**: External tools that AI assistants can connect to for extra capabilities
-- **Analogy**: Like apps you install on your phone. Your phone has basic features, but apps give it new powers. MCP servers give AI assistants new powers
-- **When you'll use it**: When you want your AI assistant to connect to services like GitHub, Playwright (browser testing), or documentation lookups
-- **Related terms**: Plugin, API, Integration
-- **Example**: The Context7 MCP server lets Droid look up the latest documentation for any programming library
-
-### Co-Author (Git)
-- **Simple definition**: A credit line in git commits showing that an AI helped write the code
-- **Analogy**: Like a "written by" credit in a book that lists multiple authors. It shows who contributed to the work
-- **When you'll use it**: Automatically added when AI assistants help you write code, so you can track which tool helped with what
-- **Related terms**: Commit, Git, Attribution
-- **Example**: `Co-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>` or `Co-Authored-By: Droid <droid@factory.ai>`
-
-### Cron Job
-- **Simple definition**: A scheduled task on your computer. "Cron" is a Unix/Linux program that runs things at specific times or intervals
-- **Analogy**: It's like setting an alarm clock that doesn't just make noise — it actually does work. "Every morning at 9 AM, check my email" or "Every hour, clean up old files"
-- **Examples we use**: Daily health check at 9:00 AM, Memory compaction every 2 hours, Gateway watchdog every 5 minutes
-- **Related terms**: Automation, Scheduler
-
 ### Environment Variable
-- **Simple definition**: A setting stored in your computer's memory that programs can read. It's how you configure software without changing code
-- **Analogy**: Like sticky notes you leave on your desk. Programs look for specific notes (like "OPENAI_API_KEY") and use what's written there
+- **Simple definition**: A setting stored outside your code that programs read at runtime — how you configure software, and where secrets like API keys live
+- **Analogy**: Like a secure safe in your office. Programs can ask the safe for what they need without the combination ever appearing in your code
+- **When you'll use it**: Storing API keys, database passwords, tokens, and any per-machine configuration
+- **Why it matters**: Keeps secrets separate from code so they don't get shared on GitHub
 - **Example**: `OPENCLAW_MEMORY_EMBEDDING_PROVIDER=local` tells OpenClaw to use local embeddings instead of cloud APIs
-- **Related terms**: Configuration, Settings, .env file
+- **Related terms**: API Key, .env file, Credentials, Configuration, Security
 
 ### Gateway (OpenClaw Gateway)
 - **Simple definition**: A background program that runs on your computer, waiting for connections. It's how OpenClaw receives messages from Telegram and other services
@@ -349,10 +418,12 @@ A personal dictionary of technical terms explained in simple language.
 - **Example**: `http://localhost:6333` means "connect to port 6333 on this same computer." That's how we talk to Qdrant
 - **Related terms**: Port, Loopback, IP Address
 
-### Daemon / Background Process
-- **Simple definition**: A program that runs without a visible window, doing its job quietly in the background
-- **Analogy**: Like the furnace in your house. It's always running, keeping things warm, but you don't see it working. You only notice if it stops
-- **Related terms**: Gateway, Cron Job, Process
+### Loopback (Gateway Bind)
+- **Simple definition**: Setting your OpenClaw gateway to only accept connections from YOUR computer, not the internet
+- **Analogy**: Like having a door that only opens from the inside. No one from outside can ever get in
+- **When you'll see it**: In gateway config - `bind: loopback` means super secure
+- **Why it matters**: Prevents anyone on the internet from accessing your AI assistant
+- **Related terms**: Gateway, OpenClaw, Security
 
 ### Plugin
 - **Simple definition**: Add-on software that extends what a main program can do. OpenClaw has plugins for Telegram, voice calls, memory systems, etc.
@@ -383,11 +454,23 @@ A personal dictionary of technical terms explained in simple language.
 - **Analogy**: Like buying pre-made ingredients instead of growing your own wheat and milking your own cows. `sentence-transformers` is a pre-made ingredient for creating embeddings
 - **Related terms**: Package, Import, Dependency
 
-### Sentence Transformers
-- **Simple definition**: A Python library for creating embeddings. It turns sentences into those number vectors (embeddings) we use for semantic search
-- **Analogy**: Like a specialized dictionary that doesn't just define words — it maps them to coordinates on a giant map of meaning
-- **Why it matters**: It's what powers our local embedding model (`all-MiniLM-L6-v2`)
-- **Related terms**: Embedding, Python Library, all-MiniLM-L6-v2
+### Shell Command Execution
+- **Simple definition**: The ability to run terminal/command-line instructions directly from within code
+- **Analogy**: Like giving someone keys to your house AND the ability to run any appliance - powerful but potentially dangerous
+- **When you'll see it**: In security scans - flagged because it CAN be dangerous if misused
+- **Why it matters**: Our capability-evolver uses this intentionally to execute commands
+- **Related terms**: Terminal, Command Line, Security
+
+### CLI (Command Line Interface)
+- **Simple definition**: A text-based way to control software by typing commands instead of clicking buttons
+- **Analogy**: Like ordering from a restaurant by saying exactly what you want to the kitchen, instead of tapping through a touchscreen menu
+- **When you'll use it**: When AI agents or developers need fast, repeatable access to tools like GitHub, Google Drive, or job boards
+- **Related terms**: Terminal, API, AI Agent
+- **Example**: Instead of opening a website and clicking five buttons, an AI can type `flight-goat search SEA LAX` and get flight options back instantly
+
+---
+
+## Security
 
 ### Security Audit
 - **Simple definition**: An automated check that scans your OpenClaw setup for security vulnerabilities and misconfigurations
@@ -395,6 +478,13 @@ A personal dictionary of technical terms explained in simple language.
 - **When you'll use it**: Run `openclaw security audit --deep` to check your gateway safety, credentials, and access controls
 - **Why it matters**: Keeps your AI assistant secure from unauthorized access
 - **Related terms**: Gateway, OpenClaw, Token, Credentials
+
+### Attack Surface
+- **Simple definition**: All the ways someone could potentially attack or access your system
+- **Analogy**: Like counting every door, window, and keypad in your house - each one is a potential entry point
+- **When you'll see it**: In security audit summary
+- **Why it matters**: Smaller attack surface = more secure
+- **Related terms**: Security, Gateway, Access Control
 
 ### Critical (Security)
 - **Simple definition**: The highest severity level in security audits. Something is broken that could directly expose your system or data
@@ -417,56 +507,7 @@ A personal dictionary of technical terms explained in simple language.
 - **Why it matters**: Good for understanding your attack surface, but no immediate action needed
 - **Related terms**: Security Audit, Critical, Warn
 
-### Capability Evolver
-- **Simple definition**: An OpenClaw skill (in our workspace) that can modify its own code and behavior based on feedback
-- **Analogy**: Like a self-improving robot that watches what it does wrong and rewires itself to do better next time
-- **When you'll use it**: It's our learning system - we tell it what we don't like, and it adjusts
-- **Why it matters**: Makes us smarter over time without manual updates
-- **Related terms**: Skill, OpenClaw, Self-Evolving
-
-### Shell Command Execution
-- **Simple definition**: The ability to run terminal/command-line instructions directly from within code
-- **Analogy**: Like giving someone keys to your house AND the ability to run any appliance - powerful but potentially dangerous
-- **When you'll see it**: In security scans - flagged because it CAN be dangerous if misused
-- **Why it matters**: Our capability-evolver uses this intentionally to execute commands
-- **Related terms**: Terminal, Command Line, Security
-
-### Environment Variables (Env)
-- **Simple definition**: Settings stored outside your code that contain sensitive information like API keys, passwords, and configuration
-- **Analogy**: Like a secure safe in your office that contains all your important keys and combinations. Programs can ask the safe for what they need without seeing what's inside
-- **When you'll use it**: Storing API keys, database passwords, tokens
-- **Why it matters**: Keeps secrets separate from code so they don't get shared on GitHub
-- **Related terms**: API Key, Credentials, Security
-
-### Loopback (Gateway Bind)
-- **Simple definition**: Setting your OpenClaw gateway to only accept connections from YOUR computer, not the internet
-- **Analogy**: Like having a door that only opens from the inside. No one from outside can ever get in
-- **When you'll see it**: In gateway config - `bind: loopback` means super secure
-- **Why it matters**: Prevents anyone on the internet from accessing your AI assistant
-- **Related terms**: Gateway, OpenClaw, Security
-
-### Attack Surface
-- **Simple definition**: All the ways someone could potentially attack or access your system
-- **Analogy**: Like counting every door, window, and keypad in your house - each one is a potential entry point
-- **When you'll see it**: In security audit summary
-- **Why it matters**: Smaller attack surface = more secure
-- **Related terms**: Security, Gateway, Access Control
-
 ---
-
-### CLI (Command Line Interface)
-- **Simple definition**: A text-based way to control software by typing commands instead of clicking buttons
-- **Analogy**: Like ordering from a restaurant by saying exactly what you want to the kitchen, instead of tapping through a touchscreen menu
-- **When you'll use it**: When AI agents or developers need fast, repeatable access to tools like GitHub, Google Drive, or job boards
-- **Related terms**: Terminal, API, AI Agent
-- **Example**: Instead of opening a website and clicking five buttons, an AI can type `flight-goat search SEA LAX` and get flight options back instantly
-
-### SQLite
-- **Simple definition**: A small database that lives in a single file on your computer
-- **Analogy**: Like a super-organized spreadsheet saved locally, but built for software to search and update quickly
-- **When you'll use it**: When a tool needs fast local storage without setting up a big database server
-- **Related terms**: Database, Local Storage, CLI
-- **Example**: A local AI tool might save your contacts or flight searches in SQLite so it can reuse them quickly without re-downloading everything
 
 ## Web & Internet
 
@@ -484,13 +525,6 @@ A personal dictionary of technical terms explained in simple language.
 - **Related terms**: Web Archive, Cache, URL
 - **Example**: If WSJ only showed the teaser when Archive.is captured it, the snapshot will only contain the teaser — not the full article
 
-### Paywall
-- **Simple definition**: A digital gate that limits content unless you pay, log in, or have access through an institution
-- **Analogy**: Like a locked door at a museum exhibit: you can see the sign outside, but the actual exhibit requires a ticket
-- **When you'll use it**: Whenever a publication like WSJ, NYT, or The Information blocks full article access for non-subscribers
-- **Related terms**: Web Archive, Subscription, Login
-- **Example**: WSJ may expose a headline and first paragraph publicly, while hiding the rest behind its paywall
-
 ---
 
 ## How to Use This Glossary
@@ -500,91 +534,10 @@ A personal dictionary of technical terms explained in simple language.
 - **Seeing history**: Run `git log` in this folder to see every time we've updated the glossary
 - **Viewing old versions**: Git keeps every version, so you can always go back to see how your understanding has grown
 
----
-
-**Terms covered**: 64
-
----
-
-## Subagent
-**What it is:** A secondary AI agent spawned by the main agent to run tasks in the background. Subagents are isolated — they have their own session and can run independently.
-
-**Analogy:** Like hiring a contractor to work on one room while you focus on the rest of the house. They report back when done.
-
-**When to use:** Running parallel tasks, heavy research, or background jobs that don't need immediate back-and-forth.
-
-**Related terms:** Spawn, Session, Cron
+Venture and investing vocabulary lives in a separate glossary:
+[vc-lab](https://github.com/EmanxChan/vc-lab/blob/main/glossary.md). This file is for how the
+technology works; that one is for what it means for a deal.
 
 ---
 
-## Spawn
-**What it is:** The act of creating or launching a subagent. In OpenClaw, you "spawn" a subagent to run a task.
-
-**Analogy:** Like pressing "start" on a new computer program. You're launching another AI to do work for you.
-
-**When to use:** When you need to delegate work to a background agent.
-
-**Related terms:** Subagent, Session
-
----
-
-## Cron
-**What it is:** A scheduled job that runs automatically at specific times. Named after "chronological" — it's time-based automation.
-
-**Analogy:** Like setting a recurring alarm or calendar reminder. The job runs itself without you asking.
-
-**When to use:** Morning briefings, daily checks, weekly scans — anything recurring.
-
-**Related terms:** LaunchAgent, Schedule
-
----
-
-## LaunchAgent
-**What it is:** A macOS background service that runs 24/7, even when your computer is asleep. Unlike cron (time-based), LaunchAgent runs continuously and can check things more frequently.
-
-**Analogy:** Like having a security camera that watches 24/7 vs. a guard who checks once an hour.
-
-**When to use:** Real-time monitoring (like model usage alerts every 5 minutes).
-
-**Related terms:** Cron, Daemon
-
----
-
-## Deduplication
-**What it is:** The process of removing duplicate entries from a list. In job scans, this means filtering out the same job that appears in multiple newsletters.
-
-**Analogy:** Like going through your contacts and removing the same person saved twice under different names.
-
-**When to use:** When combining data from multiple sources to avoid presenting the same job twice.
-
-**Related terms:** Job Scan, Newsletter
-
----
-
-*Last updated: February 23, 2026*
-
----
-
-## AI Agents & Automation
-
-### kevinrgu/autoagent (Self-Optimizing Agent)
-- **Simple definition**: A tool that lets an AI redesign itself to get better at a task — automatically, overnight
-- **Analogy**: Like hiring a personal trainer who not only coaches you, but also rewrites their own training manual after each session to make the next one better
-- **How it works**: You write a task in `program.md` (plain English), then the agent modifies its own "brain" (agent.py config), runs tests, keeps what works, and repeats
-- **When you'll use it**: When you want to build and optimize a specific AI agent or workflow — particularly useful for custom tool-building or performance tuning
-- **Watch for**: The HKUDS/autoagent project uses the same name but does something different (no-code agent builder, not self-optimizing)
-- **Related terms**: LLM, Agent, Prompt Engineering, Benchmark
-
-### HKUDS/autoagent (No-Code Agent Builder)
-- **Simple definition**: A drag-and-drop web interface for building AI agents — no coding required
-- **Analogy**: Like building a robot with Lego blocks instead of soldering parts. You snap together pre-made pieces (agents, tools, workflows) using natural language descriptions
-- **How it works**: You describe what you want in plain English — it generates the agent configuration, tools, and workflows automatically
-- **When you'll use it**: When you need to prototype an AI workflow quickly without writing code
-- **Watch for**: Similar name to kevinrgu/autoagent but completely different purpose — one builds agents, the other optimizes them
-- **Related terms**: No-Code, Agent Framework, Workflow Automation
-
-### Mem0 (AI Memory Layer)
-- **Simple definition**: A memory system for AI agents — so they can remember conversations, preferences, and context across sessions
-- **Analogy**: Like giving your AI a persistent notebook that it can write notes in and read from on future conversations
-- **Why it matters**: Standard LLMs forget everything after each conversation. Mem0 lets them maintain long-term memory — useful for personal AI assistants
-- **Related terms**: LLM, Agent, RAG, Vector Database
+**Terms covered**: 72
