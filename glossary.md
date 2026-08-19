@@ -184,18 +184,25 @@ A personal dictionary of technical terms explained in simple language.
 - **When you'll use it**: Whenever you interact with ChatGPT, Claude, image generators, or voice assistants - you're using an AI model
 - **Related terms**: Training, Parameters, Neural Network
 
+### Foundation Model
+- **Simple definition**: A very large AI model trained on a massive amount of general data that can be adapted and built on for many different tasks
+- **Analogy**: Think of it like a factory-built engine that can be dropped into many different types of vehicles — it does the hard work of existing, so builders just customize it for their specific car
+- **Example**: GPT-4 and Claude are foundation models — trained on vast amounts of text, they can then be fine-tuned or prompted to do anything from writing code to summarizing legal documents
+- **Why it matters**: Foundation models mean no one has to start AI development from zero, which is why new AI tools appear so quickly
+- **Related terms**: LLM (Large Language Model), Fine-tuning, Training (AI), Parameters, Frontier Model
+
+### Frontier Model
+- **Simple definition**: The most powerful and capable AI models that exist at any given moment, representing the outer limit of what AI can currently do
+- **Analogy**: Think of it like the fastest car on the track right now — it sets the benchmark everyone else is measured against, until a newer one beats it
+- **Example**: GPT-4o, Claude 3.5 Sonnet, and Gemini Ultra are frontier models — they represent the current ceiling in AI reasoning, language, and multimodal tasks
+- **Why it matters**: Frontier models define what is possible with AI today, and the capabilities they unlock often trickle down to smaller, cheaper models soon after
+- **Related terms**: Foundation Model, LLM (Large Language Model), Multimodal, Local Model
+
 ### LLM (Large Language Model)
 - **Simple definition**: AI trained on massive amounts of text to understand and generate human language. Examples include GPT-4, Claude, Kimi, etc.
 - **Analogy**: Like a super-librarian who's read every book in the library. They can answer questions, write stories, and explain concepts because they've "read" so much
 - **When you'll use it**: LLMs are what let me (Ebi) understand your questions and generate helpful responses
 - **Related terms**: AI, Model, Prompt, Token
-
-### Training (AI)
-- **Simple definition**: The process of teaching an AI by showing it billions of examples and letting it learn patterns through trial and error
-- **Analogy**: Like learning to ride a bike. At first you fall, your brain adjusts, you try again. Eventually balancing becomes automatic. AI does this millions of times with data
-- **When you'll use it**: You won't train AI yourself, but understanding this helps you know why AI can do what it does (and why it sometimes makes mistakes)
-- **Related terms**: AI Model, Parameters, RLHF
-- **Example**: A language model is trained by predicting the next word in billions of sentences. "The cat sat on the ___" → it guesses "mat" and checks if it's right
 
 ### Parameters
 - **Simple definition**: The internal "dials" an AI adjusts during learning - they control how the AI makes predictions
@@ -204,6 +211,20 @@ A personal dictionary of technical terms explained in simple language.
 - **Related terms**: AI Model, Training
 - **Example**: GPT-4 has over a trillion parameters. Each one was adjusted during training to help the model produce better responses
 
+### Training (AI)
+- **Simple definition**: The process of teaching an AI by showing it billions of examples and letting it learn patterns through trial and error
+- **Analogy**: Like learning to ride a bike. At first you fall, your brain adjusts, you try again. Eventually balancing becomes automatic. AI does this millions of times with data
+- **When you'll use it**: You won't train AI yourself, but understanding this helps you know why AI can do what it does (and why it sometimes makes mistakes)
+- **Related terms**: AI Model, Parameters, RLHF
+- **Example**: A language model is trained by predicting the next word in billions of sentences. "The cat sat on the ___" → it guesses "mat" and checks if it's right
+
+### Fine-tuning
+- **Simple definition**: The process of taking a pre-trained AI model and training it further on a specific, smaller dataset so it becomes better at a particular job
+- **Analogy**: Think of it like hiring a general doctor and then sending them through a specialist residency — they already know medicine, and now they are learning to focus on one thing
+- **Example**: A foundation model trained on the entire internet gets fine-tuned on customer support transcripts to become a customer service bot that knows exactly how to handle complaints
+- **Why it matters**: Fine-tuning lets you customize a powerful, general AI model for your specific needs without building one from scratch, saving enormous time and cost
+- **Related terms**: Foundation Model, Training (AI), Parameters, RLHF, LLM (Large Language Model)
+
 ### RLHF (Reinforcement Learning from Human Feedback)
 - **Simple definition**: A training method where real people rate AI responses as helpful or unhelpful, and the AI adjusts to produce more helpful answers
 - **Analogy**: Like having a coach watch your performance and give you pointers. The AI tries something, humans say "good" or "bad," and the AI learns from that feedback
@@ -211,12 +232,33 @@ A personal dictionary of technical terms explained in simple language.
 - **Related terms**: Training, AI Model
 - **Example**: An AI might generate two responses. Humans pick the better one. Over millions of comparisons, the AI learns what humans find helpful
 
-### Multimodal
-- **Simple definition**: AI that can work with multiple types of content - text, images, audio, and video - not just one type
-- **Analogy**: Like a person who can read, see photos, and listen to music, rather than only being able to read text
-- **When you'll use it**: When you upload an image to an AI and ask questions about it, or when AI generates images from your text descriptions
-- **Related terms**: AI Model, Training
-- **Example**: You show an AI a photo of your broken appliance and ask "What's wrong with this?" - that's multimodal AI understanding both your text question and the image
+### Distillation
+- **Simple definition**: The process of training a smaller, simpler AI model to mimic the behavior of a larger, more powerful one so you get similar performance at a fraction of the size
+- **Analogy**: Think of it like a master chef teaching an apprentice their most-used recipes — the apprentice cannot do everything the chef can, but they can handle the everyday menu faster and at lower cost
+- **Example**: A company might distill a large frontier model into a smaller model that runs on a phone, giving users most of the same capabilities without needing a data center
+- **Why it matters**: Distillation makes powerful AI affordable and fast enough to run in everyday products, which is why capable AI features are increasingly showing up on devices with limited computing power
+- **Related terms**: Foundation Model, Fine-tuning, Quantization, Parameters, Local Model
+
+### Quantization
+- **Simple definition**: The process of reducing the precision of an AI model's internal numbers so the model takes up less storage and runs faster, usually with only a small drop in quality
+- **Analogy**: Think of it like compressing a photo — instead of storing every pixel in full resolution, you reduce the detail slightly, ending up with a smaller file that still looks nearly the same
+- **Example**: A model that originally stores each of its numbers in 16-bit precision can be quantized to 4-bit precision, cutting its size dramatically so it can run on a laptop instead of a server
+- **Why it matters**: Quantization is a big reason why increasingly capable AI models can run on everyday hardware like laptops and phones rather than requiring expensive data centers
+- **Related terms**: Local Model, Parameters, Distillation, Inference, GPU (Graphics Processing Unit)
+
+### Inference
+- **Simple definition**: The act of running a trained AI model to get an output — this is what happens every time you send a message to an AI and it replies
+- **Analogy**: Think of it like baking: training is writing and perfecting a recipe, and inference is actually using that recipe to bake a cake for someone
+- **Example**: When you type a question into ChatGPT and it responds, that response is generated through inference — the model uses everything it learned during training to produce that answer
+- **Why it matters**: Inference is what you experience every time you use an AI, and its speed and cost directly affect how practical and affordable a tool is to run
+- **Related terms**: Training (AI), LLM (Large Language Model), Token, GPU (Graphics Processing Unit), Local Model
+
+### GPU (Graphics Processing Unit)
+- **Simple definition**: A type of computer chip originally designed for video games that turns out to be exceptionally good at the kind of math AI training and inference require
+- **Analogy**: Think of it like the difference between a Swiss Army knife (your regular CPU, good at many different tasks one at a time) and an assembly line (a GPU, built to do one simple operation millions of times at once)
+- **Example**: Training a large language model on a regular computer chip would take years — using thousands of GPUs running in parallel, it takes days or weeks
+- **Why it matters**: GPUs are the engine behind almost all modern AI development, which is why companies like Nvidia that make them have become central to the AI industry
+- **Related terms**: Training (AI), Inference, Local Model, Foundation Model
 
 ### Token
 - **Simple definition**: A unit of text that AI models process. Roughly, 1 token ≈ 0.75 words. "Hello world" is about 2-3 tokens
@@ -230,6 +272,13 @@ A personal dictionary of technical terms explained in simple language.
 - **When you'll use it**: A larger context window means I can remember more of our conversation history without losing track
 - **Related terms**: Token, LLM, Memory
 
+### Prompt Engineering
+- **Simple definition**: The practice of crafting and refining the instructions or questions you give an AI to get better, more accurate, or more useful responses
+- **Analogy**: Think of it like learning how to search Google effectively — the same question, phrased differently, can return completely different results, and getting good at it is a learnable skill
+- **Example**: Instead of asking an AI "write an email," you ask it "write a two-sentence follow-up to a client who hasn't responded in a week, keeping the tone friendly but direct" — and you get a far more useful answer
+- **Why it matters**: The same AI model can produce very different results depending on how you talk to it, so learning to phrase your requests well is one of the fastest ways to get more value out of any AI tool
+- **Related terms**: Context Window, Token, LLM (Large Language Model)
+
 ### Embedding
 - **Simple definition**: The process of turning words, sentences, or documents into a list of numbers (a vector) that captures their meaning
 - **Analogy**: Think of it like translating a poem into a secret code. Two poems with similar emotions would have similar codes, even if they use different words. The embedding is that secret code
@@ -242,6 +291,34 @@ A personal dictionary of technical terms explained in simple language.
 - **Analogy**: Regular search is like looking for a specific phone number in a phone book. Semantic search is like asking a knowledgeable friend "Who's that tall guy who fixes cars?" and they know you mean Mike from down the street
 - **Why it matters**: You don't need to remember exact words or phrases — you can describe what you're looking for and find it anyway
 - **Related terms**: Embedding, Vector Database, LLM
+
+### RAG (Retrieval-Augmented Generation)
+- **Simple definition**: A technique where an AI, before answering your question, first searches a private database of documents for relevant information and uses that to shape its answer
+- **Analogy**: Think of it like an open-book exam — instead of relying only on what the AI memorized during training, it can look up the answer in a set of documents you have given it
+- **Example**: You ask an AI chatbot about your company's refund policy, and instead of guessing, it searches your internal documents and answers based on what it finds there
+- **Why it matters**: RAG lets AI give accurate, up-to-date answers from private or recent information that was not included in its original training
+- **Related terms**: Embedding, Vector Database, Semantic Search, Context Window, LLM (Large Language Model)
+
+### Hallucination
+- **Simple definition**: When an AI confidently produces information that is factually wrong or completely made up, presented as if it were true
+- **Analogy**: Think of it like a very confident student who blanks on a test question and, instead of writing "I don't know," writes something plausible-sounding but entirely invented
+- **Example**: You ask an AI to cite its sources, and it invents the names of papers, authors, and journals that do not exist
+- **Why it matters**: Hallucinations are hard to spot because they sound convincing — always verify AI-generated facts before trusting or sharing them
+- **Related terms**: LLM (Large Language Model), RAG (Retrieval-Augmented Generation), Evals (Model Evaluation)
+
+### Evals (Model Evaluation)
+- **Simple definition**: Structured tests used to measure how well an AI model performs on specific tasks, like accuracy, reasoning, or safety
+- **Analogy**: Think of it like a standardized exam designed specifically for AI — instead of guessing whether a model is good, evals give it a set of questions or challenges and score the results
+- **Example**: A company building a medical AI might run evals where the model answers thousands of clinical questions, then checks how many it got right against verified answers from doctors
+- **Why it matters**: Without evals, it is hard to know whether one AI model is actually better than another or whether an update made things worse — they bring objectivity to AI improvement
+- **Related terms**: LLM (Large Language Model), Hallucination, Fine-tuning, RLHF
+
+### Multimodal
+- **Simple definition**: AI that can work with multiple types of content - text, images, audio, and video - not just one type
+- **Analogy**: Like a person who can read, see photos, and listen to music, rather than only being able to read text
+- **When you'll use it**: When you upload an image to an AI and ask questions about it, or when AI generates images from your text descriptions
+- **Related terms**: AI Model, Training
+- **Example**: You show an AI a photo of your broken appliance and ask "What's wrong with this?" - that's multimodal AI understanding both your text question and the image
 
 ### AI Agent
 - **Simple definition**: An AI system that can work on tasks independently over time, making decisions and taking actions without constant human guidance
@@ -540,4 +617,4 @@ technology works; that one is for what it means for a deal.
 
 ---
 
-**Terms covered**: 72
+**Terms covered**: 83
