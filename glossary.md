@@ -2,7 +2,7 @@
 
 A personal dictionary of technical terms explained in simple language.
 
-**Last updated**: 2026-05-28
+**Last updated**: 2026-08-18
 
 ---
 
@@ -267,6 +267,20 @@ A personal dictionary of technical terms explained in simple language.
 - **Related terms**: Cloud API, Embedding, Privacy
 
 ---
+
+### Hybrid Search
+- **Simple definition**: A search method that runs meaning-based search and keyword search at the same time, then combines the results
+- **Analogy**: Vector search is asking a librarian "what do you have on career advice?" Text search is asking "which book has 'job' in the title?" Hybrid asks both at once
+- **Example**: Searching your notes for "burnout" returns a note titled "feeling exhausted at work" (found by meaning) alongside one that literally contains the word "burnout" (found by keyword)
+- **Why it matters**: Pure vector search misses obvious exact matches; pure keyword search is too rigid and misses paraphrases. Hybrid gets both
+- **Related terms**: Vector Database, Embedding, all-MiniLM-L6-v2
+
+### Memory-Core (OpenClaw Plugin)
+- **Simple definition**: The built-in OpenClaw plugin that stores and retrieves memories, coordinating between your files, the embedding model, and Qdrant
+- **Analogy**: The head librarian — it knows where everything is filed, runs the search, and makes sure new material gets shelved where it can be found again
+- **Example**: When you save a note, Memory-Core turns it into an embedding, stores it in Qdrant, and later finds it again when you ask a related question
+- **Why it matters**: It's the piece that makes the memory system cohere. Without it the files, embeddings, and database stay disconnected parts
+- **Related terms**: Qdrant, Embedding, Vector Database
 
 ## Development Tools & Configuration
 
