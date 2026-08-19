@@ -592,7 +592,7 @@ A personal dictionary of technical terms explained in simple language.
 - **Simple definition**: A service that saves a copy, or "snapshot," of a web page at a specific moment in time
 - **Analogy**: Like taking a photo of a restaurant menu today so you can still see it later even if the restaurant changes the menu tomorrow
 - **When you'll use it**: When an article disappears, changes, gets blocked, or sits behind a paywall and you want to check whether someone saved an earlier accessible version
-- **Related terms**: Snapshot, Cache, Paywall, Wayback Machine
+- **Related terms**: Snapshot, Cache, Wayback Machine
 - **Example**: Archive.is and the Wayback Machine can sometimes show an older saved version of a news article, but they only contain whatever was visible when the snapshot was created
 
 ### Snapshot (Web Archive)
